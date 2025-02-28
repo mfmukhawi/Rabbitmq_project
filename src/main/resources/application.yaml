@@ -1,0 +1,15 @@
+server:
+  port: 8091
+spring:
+  application:
+    name: RabbitMq_project
+
+
+
+rabbitmq:
+  exchanges:
+    internal: internal.exchange
+  queues:
+    notification: notification.queue
+  routing-keys:
+    internal-notification: internal.notification.routing-key

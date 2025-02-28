@@ -1,0 +1,27 @@
+
+
+
+#version: '3.9'
+
+services:
+  # RabbitMQ configuration
+  rabbitmq:
+    image: rabbitmq:3.13.7-management-alpine
+    container_name: rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+#  rabbitmq:
+#    image: rabbitmq:3.13.7-management-alpine
+#    container_name: rabbitmq
+#    ports:
+#      - "5672:5672"       # RabbitMQ default port - // host:container push
+#      - "15672:15672"    # RabbitMQ management UI -// host:container export
+#    environment:
+#      RABBITMQ_DEFAULT_USER: guest
+#      RABBITMQ_DEFAULT_PASS: guest
+#    volumes:
+#      - rabbitmq_data:/var/lib/rabbitmq  # Optional: for data persistence
+#
+#volumes:
+#  rabbitmq_data:
