@@ -37,6 +37,12 @@ dependencies {
     // Lombok
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
+
+    // Java Faker - get dummy data
+    implementation("com.github.javafaker:javafaker:1.0.2") {
+        exclude group: 'org.yaml', module: 'snakeyaml'
+    }
+
 }
 
 
