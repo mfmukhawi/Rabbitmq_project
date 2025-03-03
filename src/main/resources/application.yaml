@@ -4,12 +4,10 @@ spring:
   application:
     name: RabbitMq_project
 
-
-
 rabbitmq:
   exchanges:
-    internal: internal.exchange
+    notification: notification.exchange
   queues:
     notification: notification.queue
   routing-keys:
-    internal-notification: internal.notification.routing-key
+    notification: notification.routing-key
